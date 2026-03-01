@@ -1,0 +1,37 @@
+@import "tailwindcss";
+@import "tw-animate-css";
+@custom-variant dark (&:where(.dark, .dark *));
+
+:root {
+  --color-pantone-blue: #0F4C81;
+  --color-pantone-coral: #FF6F61;
+  --color-pantone-bg: #F4F4F4;
+  --color-pantone-text: #2B2B2B;
+}
+
+.dark {
+  --color-pantone-blue: #5C9FD6;
+  --color-pantone-coral: #FF8A82;
+  --color-pantone-bg: #121212;
+  --color-pantone-text: #E5E5E5;
+}
+
+@theme {
+  --color-pantone-blue: var(--color-pantone-blue);
+  --color-pantone-coral: var(--color-pantone-coral);
+  --color-pantone-bg: var(--color-pantone-bg);
+  --color-pantone-text: var(--color-pantone-text);
+  --font-sans: var(--font-inter), ui-sans-serif, system-ui, sans-serif;
+  --font-outfit: var(--font-outfit), ui-sans-serif, system-ui, sans-serif;
+}
+
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: 5rem;
+  /* Accounts for the fixed navbar height (h-20) */
+}
+
+body {
+  background-color: var(--color-pantone-bg);
+  color: var(--color-pantone-text);
+}
