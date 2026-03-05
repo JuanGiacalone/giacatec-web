@@ -9,7 +9,8 @@ export const es = {
   },
   hero: {
     title: 'Soluciones a medida que te ayudan a crecer',
-    subtitle: 'Transforma tu negocio con tecnología de vanguardia. desarrollo de software a medida y automatización con IA para escalar tus operaciones.',
+    subtitle: 'Transforma tu negocio con IA.',
+    subtitle2: 'Desarrollamos software a medida y automatizamos con IA para escalar tus operaciones.',
     cta: 'Descubrinos',
     freeConsultation: 'Obtén una Consulta Gratuita',
     freeConsultationDesc: 'Hablemos sobre cómo podemos transformar tu negocio con tecnología.',

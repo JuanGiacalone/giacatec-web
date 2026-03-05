@@ -78,13 +78,16 @@ export default function Home() {
               <p className="text-lg md:text-xl text-pantone-text/80 dark:text-white/80 mb-10 max-w-2xl mx-auto">
                 {t.hero.subtitle}
               </p>
+              <p className="text-lg md:text-xl text-pantone-text/80 dark:text-white/80 mb-10 max-w-2xl mx-auto">
+                {t.hero.subtitle2}
+              </p>
               <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
                 <Link href="/contact" className="bg-pantone-blue dark:bg-pantone-coral text-white px-8 py-4 rounded-full font-medium hover:bg-pantone-blue/90 dark:hover:bg-pantone-coral/90 transition-all flex items-center gap-2 group">
                   {t.hero.cta}
                   <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
                 </Link>
                 <Link href="#workspace" className="bg-white dark:bg-transparent text-pantone-blue dark:text-white border border-pantone-blue/20 dark:border-white/20 px-8 py-4 rounded-full font-medium hover:bg-pantone-blue/5 dark:hover:bg-white/5 transition-all">
-                  Google Workspace + IA
+                  Google Workspace + Gemini AI
                 </Link>
               </div>
             </motion.div>

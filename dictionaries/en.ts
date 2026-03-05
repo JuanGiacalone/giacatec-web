@@ -9,7 +9,8 @@ export const en = {
   },
   hero: {
     title: 'Custom IT Solutions & Workspace Setups',
-    subtitle: 'Transform your business with cutting-edge technology. We specialize in Google Workspace migrations, custom software development, and AI automation to scale your operations.',
+    subtitle: 'Transform your business with cutting-edge technology.',
+    subtitle2: 'We specialize in Google Workspace migrations, custom software development, and AI automation to scale your operations.',
     cta: 'Discover Our Solutions',
     freeConsultation: 'Get a Free Consultation',
     freeConsultationDesc: 'Let\'s talk about how we can transform your business with technology.',
