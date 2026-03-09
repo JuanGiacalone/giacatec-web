@@ -314,10 +314,9 @@ export default function Home() {
               {workspaceApps.map((app, i) => (
                 <motion.div
                   key={`showcase-${app.id}`}
-                  initial={{ opacity: 0, y: 20 }}
                   whileInView={{ opacity: 1, y: 0 }}
                   viewport={{ once: true }}
-                  transition={{ delay: i * 0.1 }}
+                  transition={{ delay: i * 0.5 }}
                   className="bg-white dark:bg-[#1E1E1E] p-8 rounded-3xl shadow-sm border border-pantone-text/5 dark:border-white/5 hover:shadow-md transition-all group hover:-translate-y-1"
                 >
                   <div className="w-14 h-14 bg-pantone-blue/5 dark:bg-pantone-blue/20 rounded-2xl flex items-center justify-center mb-6 group-hover:bg-pantone-blue/10 dark:group-hover:bg-pantone-blue/30 transition-colors">

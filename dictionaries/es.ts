@@ -53,7 +53,7 @@ export const es = {
     },
   },
   about: {
-    title: 'Sobre la Agencia IT Giacatec: Tu Socio Tecnológico',
+    title: 'Queremos ser tu Socio Tecnológico',
     history: 'Fundada con la visión de democratizar el acceso a tecnología empresarial de primer nivel, la Agencia IT Giacatec es el puente entre las empresas tradicionales y la era digital. Entregamos soluciones IT a medida y migraciones a Google Workspace que marcan una diferencia real.',
     valuesTitle: 'Nuestros Valores',
     values: {
