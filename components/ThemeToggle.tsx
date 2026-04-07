@@ -3,9 +3,10 @@
 import { useTheme } from 'next-themes';
 import { Moon, Sun } from 'lucide-react';
 import { useEffect, useState } from 'react';
+import { motion, AnimatePresence } from 'motion/react';
 
 export default function ThemeToggle() {
-  const { theme, setTheme, resolvedTheme } = useTheme();
+  const { resolvedTheme, setTheme } = useTheme();
   const [mounted, setMounted] = useState(false);
 
   useEffect(() => {
@@ -13,20 +14,41 @@ export default function ThemeToggle() {
   }, []);
 
   if (!mounted) {
-    return <div className="w-8 h-8" />; // Placeholder to avoid layout shift
+    return <div className="w-10 h-10" />;
   }
+
+  const isDark = resolvedTheme === 'dark';
 
   return (
     <button
-      onClick={() => setTheme(resolvedTheme === 'dark' ? 'light' : 'dark')}
-      className="p-2 rounded-full hover:bg-pantone-text/5 dark:hover:bg-white/10 transition-colors"
+      onClick={() => setTheme(isDark ? 'light' : 'dark')}
+      className="relative w-10 h-10 rounded-xl bg-surface-alt border border-border flex items-center justify-center hover:border-primary/40 transition-all duration-300 overflow-hidden group"
       aria-label="Toggle Dark Mode"
     >
-      {resolvedTheme === 'dark' ? (
-        <Sun className="w-5 h-5 text-pantone-coral" />
-      ) : (
-        <Moon className="w-5 h-5 text-pantone-blue" />
-      )}
+      <AnimatePresence mode="wait">
+        {isDark ? (
+          <motion.div
+            key="sun"
+            initial={{ rotate: -90, scale: 0, opacity: 0 }}
+            animate={{ rotate: 0, scale: 1, opacity: 1 }}
+            exit={{ rotate: 90, scale: 0, opacity: 0 }}
+            transition={{ duration: 0.3 }}
+          >
+            <Sun className="w-[18px] h-[18px] text-accent" />
+          </motion.div>
+        ) : (
+          <motion.div
+            key="moon"
+            initial={{ rotate: 90, scale: 0, opacity: 0 }}
+            animate={{ rotate: 0, scale: 1, opacity: 1 }}
+            exit={{ rotate: -90, scale: 0, opacity: 0 }}
+            transition={{ duration: 0.3 }}
+          >
+            <Moon className="w-[18px] h-[18px] text-primary" />
+          </motion.div>
+        )}
+      </AnimatePresence>
+      <div className="absolute inset-0 bg-primary/5 opacity-0 group-hover:opacity-100 transition-opacity" />
     </button>
   );
 }
